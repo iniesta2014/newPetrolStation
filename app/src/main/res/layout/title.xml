@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="50dp"
+    android:background="@android:color/white">
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:src="@drawable/back"
+    />
+    <!-- gravity用于控制布局中控件的对齐方式，
+    如果没有子控件的控件设置此属性，则表示内容的对齐方式
+    如果有子控件的控件设置此属性，则表示子控件的对齐方式
+    layout_gravity用于设置控件在父布局容器中的对齐方式-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
+    <!--padding是指该控件内部内容，如文本距离该控件的边距，
+    layout_margin该控件距父控件的边距-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:id="@+id/tv_title_button"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingRight="16dp"
+        android:textColor="@android:color/black"
+        android:text="weizhi"/>
+
+
+
+
+
+</RelativeLayout>
