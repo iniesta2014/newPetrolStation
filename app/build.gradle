@@ -28,5 +28,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile files('libs/juhe_sdk_v_2_7.jar')
     compile files('libs/BaiduLBS_Android.jar')
-
+    compile files('libs/juhe_sdk_v_2_1.jar')
 }

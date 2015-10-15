@@ -19,7 +19,7 @@ public class PriceListAdapter extends BaseAdapter{
     private List<Petrol> list;
     private LayoutInflater mInflater;
 
-    public PriceListAdapter(List<Petrol> list,Context context) {
+    public PriceListAdapter(Context context,List<Petrol> list) {
         this.list = list;
         mInflater = LayoutInflater.from(context);
     }

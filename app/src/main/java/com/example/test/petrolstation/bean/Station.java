@@ -16,8 +16,8 @@ public class Station implements Parcelable {
     private String address;
     private String brandname;
     private String position;
-    private String lat;
-    private String lon;
+    private double lat;
+    private double lon;
     private ArrayList<Petrol> priceList;
     private ArrayList<Petrol> gaspriceList;
 
@@ -91,19 +91,19 @@ public class Station implements Parcelable {
         this.position = position;
     }
 
-    public String getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public void setLat(String lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
-    public String getLon() {
+    public double getLon() {
         return lon;
     }
 
-    public void setLon(String lon) {
+    public void setLon(double lon) {
         this.lon = lon;
     }
 
@@ -119,8 +119,8 @@ public class Station implements Parcelable {
         dest.writeString(areaname);
         dest.writeString(brandname);
         dest.writeString(position);
-        dest.writeString(lat);
-        dest.writeString(lon);
+        dest.writeDouble(lat);
+        dest.writeDouble(lon);
         dest.writeList(priceList);
         dest.writeList(gaspriceList);
     }
@@ -135,8 +135,8 @@ public class Station implements Parcelable {
             station.areaname = source.readString();
             station.brandname = source.readString();
             station.position = source.readString();
-            station.lat = source.readString();
-            station.lon = source.readString();
+            station.lat = source.readDouble();
+            station.lon = source.readDouble();
             station.priceList = source.readArrayList(Petrol.class.getClassLoader());
             station.gaspriceList = source.readArrayList(Petrol.class.getClassLoader());
             return station;
